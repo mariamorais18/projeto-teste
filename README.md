@@ -1,7 +1,13 @@
 # projeto-teste 
 
-teste
+git clone https://github.com/mariamorais18/projeto-teste.git
 
-alo
+git config --global user.name "mariamorais18"
 
-teste alteração
+git config --global user.email "maria.morais14@fatec.sp.gov.br
+
+para salvar:
+
+git add .
+
+git commit -m "comentario da atualizaçao lalala"
