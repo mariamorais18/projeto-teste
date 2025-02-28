@@ -15,8 +15,20 @@ public class exercicioController {
     }
 
 
-    @GetMapping("{nome}")
-    public String Helloworld(@PathVariable Optional<String> nome){
-        return nome.isPresent() ? nome.get() : "dd";
+    @GetMapping("{idade}")
+    public String verificaIdade(@PathVariable Optional<String> idade){
+        idade.ifPresent(value -> System.out.println("Idade: " + value));
+        int idadeInt = Integer.parseInt(idade.get());
+        if (idadeInt > 0 && idadeInt <12){
+            return "Criança";
+        }else if (idadeInt >= 12 && idadeInt <= 18){
+            return "Adolescente";
+        }else if (idadeInt >= 19 && idadeInt <= 60){
+            return "Adulto";
+        }if (idadeInt > 60){
+            return "Idoso";
+        } else {
+            return "Idade inválida";
+        }
     }
 }
